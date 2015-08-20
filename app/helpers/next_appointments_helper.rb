@@ -1,0 +1,2 @@
+module NextAppointmentsHelper
+end

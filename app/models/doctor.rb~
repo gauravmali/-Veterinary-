@@ -1,0 +1,8 @@
+class Doctor < ActiveRecord::Base
+ has_many :appointments
+ has_many :animals, :through => :appointments
+
+ validates :name, :type_of_animal, :breed, :age, :weight, presence: true
+ validates :name, :breed, length: {maximum: 35}
+ validates :type_of_animal, inclusion: { in : (Dog,Cat,Bird), message: "%{value} is not availabel. You can choose from Dog/Cat/Bird"} 
+end

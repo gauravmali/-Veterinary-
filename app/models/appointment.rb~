@@ -1,0 +1,5 @@
+class Appointment < ActiveRecord::Base
+  belongs_to :doctor
+  belongs_to :animal
+  has_one:next_appointment
+end

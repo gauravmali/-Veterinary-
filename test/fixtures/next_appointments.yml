@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  next_date: MyString
+  appointment_id: 
+
+two:
+  next_date: MyString
+  appointment_id: 
