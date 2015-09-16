@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Next date:</strong>
+  <%= @next_appointment.next_date %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @next_appointment.animal.name %>
+</p>
+
+<%= link_to 'Edit', edit_next_appointment_path(@next_appointment) %> |
+<%= link_to 'Back', next_appointments_path %>

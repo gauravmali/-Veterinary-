@@ -1,0 +1,6 @@
+class RemoveDateFromAppointments < ActiveRecord::Migration
+  def change
+	remove_coloumn :appointments, :date, :string
+	add_coloumn    :appointments, :date, :datetime
+  end
+end

@@ -1,0 +1,25 @@
+<%= form_for(@next_appointment) do |f| %>
+  <% if @next_appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@next_appointment.errors.count, "error") %> prohibited this next_appointment from being saved:</h2>
+
+      <ul>
+      <% @next_appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :next_date %><br>
+    <%= f.text_field :next_date %>
+  </div>
+  <div class="field">
+    <%= f.label :animal_id %><br>
+    <%= f.text_field :animal_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

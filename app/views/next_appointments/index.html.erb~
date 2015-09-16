@@ -16,7 +16,7 @@
     <% @next_appointments.each do |next_appointment| %>
       <tr>
         <td><%= next_appointment.next_date %></td>
-        <td><%= next_appointment.appointment%></td>
+        <td><%= next_appointment.animal.name if next_appointment.animal%></td>
         <td><%= link_to 'Show', next_appointment %></td>
         <td><%= link_to 'Edit', edit_next_appointment_path(next_appointment) %></td>
         <td><%= link_to 'Destroy', next_appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

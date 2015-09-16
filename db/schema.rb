@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150819225018) do
+ActiveRecord::Schema.define(version: 20150916183208) do
 
   create_table "animals", force: :cascade do |t|
     t.string   "name"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20150819225018) do
   end
 
   create_table "appointments", force: :cascade do |t|
-    t.string   "date"
     t.string   "customer_name"
     t.boolean  "appoint_remind"
     t.text     "reason"
@@ -32,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150819225018) do
     t.integer  "animal_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.datetime "date"
   end
 
   add_index "appointments", ["animal_id"], name: "index_appointments_on_animal_id"

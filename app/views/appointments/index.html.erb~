@@ -19,7 +19,7 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= appointment.date.strftime("%Y-%m-%d") %></td>
+        <td><%= appointment.date.strftime("%Y-%m-%d" %></td>
         <td><%= appointment.customer_name %></td>
         <td><%= appointment.appoint_remind %></td>
         <td><%= appointment.reason %></td>

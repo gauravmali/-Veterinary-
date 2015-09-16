@@ -1,11 +1,11 @@
 class Appointment < ActiveRecord::Base
   belongs_to :doctor
   belongs_to :animal
-  has_one:next_appointment
+  
 
 
   validates :date, :customer_name, :reason, presence: true
-validate :date_cannot_be_in_the_past
+  validate :date_cannot_be_in_the_past
 
 
   def date_cannot_be_in_the_past
